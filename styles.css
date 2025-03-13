@@ -1,0 +1,185 @@
+body {
+  background-color: rgb(0, 0, 0); /* Fondo negro */
+  color: white; /* Texto blanco */
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+} 
+
+.top {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(61, 61, 61);
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribuye el contenido a los extremos */
+  padding: 0px;
+}
+
+
+.img {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/inicio.jpg);
+}
+
+.title1{
+  color: rgb(0, 125, 209);
+  text-align: left;
+  padding: 5px;
+  padding-left: 20px;
+}
+
+a {
+  color: rgb(255, 255, 255); /* Color normal */
+  text-decoration: none; /* Quita el subrayado */
+}
+
+a:visited {
+  color: rgb(255, 255, 255); /* Mantiene el color */
+}
+
+a:hover {
+  color: rgb(255, 255, 255); /* Color al pasar el mouse */
+}
+
+a:active {
+  color: rgb(255, 255, 255); /* Color cuando se presiona */
+}
+
+
+.title2 {
+  color: rgb(0, 125, 209);
+  text-align: center;
+  font-size: 2rem; /* Tamaño de fuente ajustable */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.buttons1 {
+  display: flex;
+  gap: 10px; /* Espaciado entre los botones */
+}
+
+.reg, .inc, .return {
+  color: rgb(0, 125, 209);
+  background-color: rgb(61, 61, 61);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.cont-cont {
+  width: 100%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background-color: rgb(61, 61, 61);
+}
+
+.categ-cont {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 15%;
+  margin-right: 15%;
+  border-radius: 10px;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  background-color: rgb(75, 75, 75);
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3,1fr);
+  gap: 50px;
+}
+
+/* Estilos generales para todas las categorías */
+.categ-cont a {
+  width: 150px; /* Ancho del botón */
+  height: 150px; /* Alto del botón */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px; /* Bordes redondeados */
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  text-decoration: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* Efecto Hover */
+.categ-cont a:hover {
+  transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+  opacity: 0.8; /* Hace el efecto más sutil */
+}
+
+/* Asignar imágenes a cada categoría */
+.categ-action {background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Action.jpg'); }
+.categ-racing {background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Racing.jpg'); }
+.categ-sports {background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Sports.jpg'); }
+.categ-rol {background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Rol.jpg'); }
+.categ-survival {background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Survival.jpg'); }
+.categ-horror {background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Horror.jpg'); }
+
+
+/* CONFIG JUEGOS */
+.games-cont {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 15%;
+  margin-right: 15%;
+  border-radius: 10px;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  background-color: rgb(75, 75, 75);
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3,1fr);
+  gap: 50px;
+}
+
+.games-cont a:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.pictures {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+/* Ventana Juegos */
+
+.cont-game {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 15%;
+  margin-right: 15%;
+  border-radius: 10px;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  background-color: rgb(75, 75, 75);
+  display: flex;
+  gap: 50px;
+}
+
+.desc{
+  text-align: center;
+}
