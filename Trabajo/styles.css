@@ -43,7 +43,6 @@ body {
 }
 
 /* EFECTO HOVER EN HIPERVINCULO */
-
 a {
   color: rgb(255, 255, 255); /* Color normal */
   text-decoration: none; /* Quita el subrayado */
@@ -62,7 +61,6 @@ a:active {
 }
 
 /* TITULO CATEGORIAS */
-
 .title2 {
   position: absolute;
   color: rgb(255, 255, 255);
@@ -80,7 +78,6 @@ a:active {
 }
 
 /* DESCRIPCION CATEGORIAS */
-
 .cat_desc{
   margin: 0;
   padding: 0;
@@ -92,7 +89,6 @@ a:active {
 }
 
 /* BOTONES REGISTRARSE, INICIAR SESION Y VOLVER */
-
 .buttons1 {
   display: flex;
   gap: 8px; /* Espaciado entre los botones */
@@ -106,6 +102,24 @@ a:active {
   padding: 8px 12px;
   cursor: pointer;
   font-weight: bold;
+}
+
+.list-categ{
+  display: flex;
+  justify-content: left;
+  text-align: left;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  margin-left: 25px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.list-categ a{
+  text-decoration: none;
+  padding: 5px;
+  gap: 10px;
+  color: rgb(186, 0, 253);
 }
 
 /* DIV PRINCIPAL PARA CATEGORIAS Y JUEGOS */
