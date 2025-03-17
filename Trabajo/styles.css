@@ -1,7 +1,13 @@
+/* ESTILOS GENERALES */
+*{
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(0, 0, 0); /* Fondo negro */
-  color: white; /* Texto blanco */
-  font-family: Arial, sans-serif;
+  color: rgb(255, 255, 255); /* Texto blanco */
+  font-family: Arial;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -12,7 +18,7 @@ body {
 .top {
   width: 100%;
   height: 50px;
-  background-color: rgb(61, 61, 61);
+  background-color: rgb(186, 0, 253);
   display: flex;
   align-items: center;
   justify-content: space-between; /* Distribuye el contenido a los extremos */
@@ -25,17 +31,18 @@ body {
   height: 500px;
   display: flex;
   align-items: center;
-  background-size: cover;
   background-position: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/inicio.jpg);
 }
 
 .title1{
-  color: rgb(0, 125, 209);
+  color: rgb(255, 255, 255);
+  font-style: Arial;
   text-align: left;
   padding: 5px;
   padding-left: 20px;
 }
+
+/* EFECTO HOVER EN HIPERVINCULO */
 
 a {
   color: rgb(255, 255, 255); /* Color normal */
@@ -51,41 +58,65 @@ a:hover {
 }
 
 a:active {
-  color: rgb(255, 255, 255); /* Color cuando se presiona */
+  color: rgb(255, 255, 255);/* Color cuando se presiona */
 }
 
+/* TITULO CATEGORIAS */
 
 .title2 {
-  color: rgb(0, 125, 209);
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-style: Arial;
   text-align: center;
-  font-size: 2rem; /* Tamaño de fuente ajustable */
+  font-size: 2rem;
   display: flex;
+  flex-direction: column; /* Organiza los hijos (h2 y p) en columna */
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: auto;
+  gap: 0;
+  padding: 0;
 }
+
+/* DESCRIPCION CATEGORIAS */
+
+.cat_desc{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+  font-size: 20px;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+/* BOTONES REGISTRARSE, INICIAR SESION Y VOLVER */
 
 .buttons1 {
   display: flex;
-  gap: 10px; /* Espaciado entre los botones */
+  gap: 8px; /* Espaciado entre los botones */
+  padding-right: 10px;
 }
 
 .reg, .inc, .return {
-  color: rgb(0, 125, 209);
-  background-color: rgb(61, 61, 61);
+  color: rgb(255, 255, 255);
+  background-color: rgb(186, 0, 253);
   border: none;
   padding: 8px 12px;
   cursor: pointer;
+  font-weight: bold;
 }
 
+/* DIV PRINCIPAL PARA CATEGORIAS Y JUEGOS */
 .cont-cont {
   width: 100%;
   padding-top: 3%;
   padding-bottom: 3%;
-  background-color: rgb(61, 61, 61);
+  background-color: rgb(255, 255, 255, 0.9);
 }
 
+/* CONTENEDOR CATEGORIAS */
 .categ-cont {
   margin-top: 1%;
   margin-bottom: 1%;
@@ -96,14 +127,15 @@ a:active {
   padding-left: 2%;
   padding-right: 2%;
   padding-bottom: 2%;
-  background-color: rgb(75, 75, 75);
+  background-color: rgb(255, 255, 255, 0.9);
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(3,1fr);
   gap: 50px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Estilos generales para todas las categorías */
+/* ESTILO HIPERVINCULOS CATEGORIAS */
 .categ-cont a {
   width: 150px; /* Ancho del botón */
   height: 150px; /* Alto del botón */
@@ -120,13 +152,13 @@ a:active {
   text-decoration: none;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
-/* Efecto Hover */
+/* EFECTO HOVER CATEGORIAS */
 .categ-cont a:hover {
   transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
   opacity: 0.8; /* Hace el efecto más sutil */
 }
 
-/* Asignar imágenes a cada categoría */
+/* ASIGNAR IMAGENES A CATEGORIAS */
 .categ-action {background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Action.jpg'); }
 .categ-racing {background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Racing.jpg'); }
 .categ-sports {background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Sports.jpg'); }
@@ -135,7 +167,7 @@ a:active {
 .categ-horror {background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Horror.jpg'); }
 
 
-/* CONFIG JUEGOS */
+/* CONFIGURACION JUEGOS */
 .games-cont {
   margin-top: 1%;
   margin-bottom: 1%;
@@ -146,25 +178,27 @@ a:active {
   padding-left: 2%;
   padding-right: 2%;
   padding-bottom: 2%;
-  background-color: rgb(75, 75, 75);
+  background-color: rgb(255, 255, 255, 0.9);
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(3,1fr);
   gap: 50px;
 }
 
+/* EFECTO HOVER PARA JUEGOS */
 .games-cont a:hover {
   transform: scale(1.1);
   opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* TAMAÑO MAXIMO PARA IMAGENES */
 .pictures {
   max-width: 300px;
   max-height: 300px;
 }
 
-/* Ventana Juegos */
-
+/* VENTANA DEL JUEGO */
 .cont-game {
   margin-top: 1%;
   margin-bottom: 1%;
@@ -175,19 +209,49 @@ a:active {
   padding-left: 2%;
   padding-right: 2%;
   padding-bottom: 2%;
-  background-color: rgb(75, 75, 75);
+  background-color: rgb(186, 0, 253, 0.8);
   display: flex;
   gap: 50px;
 }
 
+/* DESCRIPCION JUEGO */
 .desc{
   text-align: center;
 }
 
+/* EFECTO HOVER PARA JUEGOS */
 .game{
-  transform: scale(1.1);
-  opacity: 0.8;
+  transform: scale(0.9);
   text-shadow: 2px 2px 5px black;
   text-decoration: none;
   transition: transform 0.3s ease, opacity 0.3s ease;
+} 
+
+.cart{
+  background-color: rgb(56, 192, 194);
+  border: 0px;
+  border-radius: 10px;
+  width: 200px;
+  height: 40px;
+  transition: transform 0.3s;
+  font: arial;
+  font-weight: bold;
+}
+
+/* IMAGENES JUEGO */
+.gallery {
+  display: flex;
+  justify-content: center; /* Centrar imágenes */
+  gap: 20px; /* Espacio entre imágenes */
+  margin-top: 20px; /* Separación de la parte superior */
+}
+
+.gallery-img {
+  width: 30%; /* Controla el ancho de cada imagen */
+  border-radius: 10px; /* Esquinas redondeadas */
+  transition: transform 0.3s; /* Animación al pasar el mouse */
+}
+
+.gallery-img:hover {
+  transform: scale(1.1); /* Zoom al pasar el mouse */
 }
