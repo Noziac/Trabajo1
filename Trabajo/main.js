@@ -53,6 +53,4 @@ function validateForm() {
         alert("Debes tener al menos 13 años para registrarte.");
         return;
     }
-
-    alert("Formulario validado correctamente. ¡Gracias por registrarte!");
 }
