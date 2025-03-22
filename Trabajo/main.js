@@ -17,13 +17,13 @@ function validateForm() {
 
     // Validar campos obligatorios
     if (!name || !nickname || !mail || !pass1 || !pass2 || !birthdate) {
-        alert("Por favor, completa todos los campos obligatorios.");
+        alert("Completa todos los campos obligatorios.");
         return;
     }
 
     // Validar formato del correo
     if (!emailRegex.test(mail)) {
-        alert("Por favor, ingresa un correo válido.");
+        alert("Ingresa un correo válido.");
         return;
     }
 
@@ -35,22 +35,20 @@ function validateForm() {
 
     // Validar formato de contraseña
     if (!passwordRegex.test(pass1)) {
-        alert("La contraseña debe tener entre 6 y 18 caracteres, al menos un número y una mayúscula.");
+        alert("La contraseña debe tener entre 6 y 18 caracteres, un número y una mayúscula.");
         return;
     }
 
     // Validar edad mínima (13 años)
     const birthDate = new Date(birthdate);
     const today = new Date();
-    const age = today.getFullYear() - birthDate.getFullYear();
+    let age = today.getFullYear() - birthDate.getFullYear();
     const monthDiff = today.getMonth() - birthDate.getMonth();
 
     if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
         age--;
     }
 
-    if (age < 13) {
-        alert("Debes tener al menos 13 años para registrarte.");
-        return;
-    }
+    alert("Registro exitoso. Redirigiendo...");
+    window.location.href = "../index.html"; // Redirección
 }

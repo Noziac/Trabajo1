@@ -2,33 +2,43 @@
 
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Registrarse</title>
-    <link rel="stylesheet" href="../styles.css"> <!-- Enlace al archivo CSS -->
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Steem - Iniciar Sesión</title>
+        <link rel="stylesheet" href="../styles.css"> <!-- Enlace al archivo CSS -->
+    </head>
 
-<body class="body">
-    <header>
-        <div class="top">
-            <div class="title1">
-                <h1>Steem</h1>
+    <body class="body">
+        <header>
+            <div class="top">
+                <div class="title1">
+                    <a href="../index.html"><h1>Steem</h1></a>
+                </div>
+                <div class="buttons1">
+                    <button class="return" onclick="history.back(-1);">Volver</button>
+                </div>
             </div>
-            <div class="buttons1">
-                <button class="return" onclick="history.back(-1);">Volver</button>
-            </div>
-        </div>
-    </header>
-    <main>
-        <div class="cont-cont">
+        </header>
+        <main>
             <div class="cont-login">
-                
-            </div>
-        </div>
-        <footer>
-            <p> Copyright © 2025 Steem. Todos los derechos reservados.</p>
-        </footer>
-    </main>
-</body>
+                <div class="cont-form">
+                    <form id="form" class="form-log">
+                        <h2>Iniciar Sesión</h2>
+                        <label for="nick">Nombre Completo</label>
+                        <input id="nick" name="nick" required type="text">  
 
+                        <label for="pass">Contraseña</label>
+                        <input id="pass" name="pass" required type="text">  
+
+                        <button type="login">Iniciar sesión</button>
+                    </form>
+                </div>
+            </div>
+            <script src="../main.js"></script>
+            <footer>
+                <p> Copyright © 2025 Steem. Todos los derechos reservados.</p>
+            </footer>
+        </main>
+    </body>
 </html>
+

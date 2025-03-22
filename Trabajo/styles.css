@@ -25,7 +25,6 @@ body {
   padding: 0px;
 }
 
-
 .img {
   width: 100%;
   height: 500px;
@@ -46,10 +45,6 @@ body {
 a {
   color: rgb(255, 255, 255); /* Color normal */
   text-decoration: none; /* Quita el subrayado */
-}
-
-a:visited {
-  color: rgb(255, 255, 255); /* Mantiene el color */
 }
 
 a:hover {
@@ -272,35 +267,176 @@ a:active {
   transform: scale(1.1); /* Zoom al pasar el mouse */
 }
 
-.cont-register{
-  margin-top: 1%;
-  margin-bottom: 1%;
-  margin-left: 30%;
-  margin-right: 30%;
-  border-radius: 10px;
-  padding-top: 2%;
-  padding-left: 2%;
-  padding-right: 2%;
-  padding-bottom: 2%;
-  background-color: rgb(186, 0, 253, 0.8);
-  display: grid;
-  gap: 50px;
-  font-weight: bold;
-  align-content: center;
-  grid-template-columns: repeat(3, 1fr);
+/* PAGINA REGISTER */
+/* CONTENEDOR GENERAL */
+.cont-register {
+  width: 100%;
+  height: 89vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 0;
+  background-color: rgba(255, 255, 255);
+  background: url(../Trabajo/images/fregister.jpg);
+  background-position: center;
 }
 
-.cont-login{
-  margin-top: 1%;
-  margin-bottom: 1%;
-  margin-left: 30%;
-  margin-right: 30%;
+/* CONTENEDOR FORMULARIO */
+.cont-form {
+  width: 350px; /* Ajusta el ancho */
+  background-color: rgb(186, 0, 253, 0.8); /* Morado semitransparente */
   border-radius: 10px;
-  padding-top: 2%;
-  padding-left: 2%;
-  padding-right: 2%;
-  padding-bottom: 2%;
-  background-color: rgb(186, 0, 253, 0.8);
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* ESTILO FORMULARIO */
+.form-reg {
   display: flex;
-  gap: 50px;
+  flex-direction: column;
+  gap: 15px; /* Espacio entre elementos */
+  color: white;
+}
+
+/* LABELS */
+.form-reg label {
+  text-align: left;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* INPUTS */
+.form-reg input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(224, 140, 255, 0.5);
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-reg input::placeholder {
+  color: #b79dc8;
+}
+
+/* BOTONES */
+.form-reg button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-reg button[type="submit"] {
+  background-color: rgb(56, 192, 194);
+  color: rgb(186, 0, 253, 0.8);
+  font-weight: bold;
+}
+
+.form-reg button[type="submit"]:hover {
+  background-color: rgb(56, 192, 194);
+}
+
+.form-reg button[type="reset"] {
+  background-color: rgb(199, 212, 18);
+  color: rgb(186, 0, 253, 0.8);
+  font-weight: bold;
+}
+
+.form-reg button[type="reset"]:hover {
+  background-color: rgb(199, 212, 18);
+}
+
+/* PAGINA LOGIN */
+/* CONTENEDOR GENERAL */
+.cont-login {
+  width: 100%;
+  height: 89vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 0;
+  background-color: rgba(255, 255, 255);
+  background: url(../Trabajo/images/fregister.jpg);
+  background-position: center;
+}
+
+/* CONTENEDOR FORMULARIO */
+.cont-form {
+  width: 350px; /* Ajusta el ancho */
+  background-color: rgb(186, 0, 253, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* ESTILO FORMULARIO */
+.form-log {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: white;
+}
+
+/* LABELS */
+.form-log label {
+  text-align: left;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* INPUTS */
+.form-log input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(224, 140, 255, 0.5);
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-log input::placeholder {
+  color: #b79dc8;
+}
+
+/* BOTON */
+.form-log button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-log button[type="login"] {
+  background-color: rgb(56, 192, 194);
+  color: rgb(186, 0, 253, 0.8);
+  font-weight: bold;
+}
+
+.form-log button[type="login"]:hover {
+  background-color: rgb(56, 192, 194);
+}
+
+/* EFECTOS BOTONES REG, LOG y RETURN*/
+/* Hover para el botón 'Registrarse' */
+button.reg:hover {
+  color: rgb(56, 192, 194);
+}
+
+/* Hover para el botón 'Iniciar sesión' */
+button.inc:hover {
+  color: rgb(56, 192, 194);
+}
+
+/* Hover para el botón 'Volver' */
+button.return:hover {
+  color: rgb(56, 192, 194);
 }
